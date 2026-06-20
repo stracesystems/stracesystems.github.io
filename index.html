@@ -3,226 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strace Systems Ltd | Enterprise Document Infrastructure & GRC</title>
+    <title>Strace Systems Ltd</title>
     
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+    <!-- DevSecOps Strict Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: *;">
 
+    <!-- Premium Minimalist Native Stylesheet -->
     <style>
-        :root { --bg: #030712; --panel: #0b1329; --border: #1e293b; --text: #f8fafc; --text-muted: #94a3b8; --primary: #2563eb; --primary-glow: rgba(37,99,235,0.15); --emerald: #10b981; --amber: #f59e0b; }
+        :root {
+            --bg: #09090b;
+            --surface: #18181b;
+            --border: #27272a;
+            --text: #fafafa;
+            --text-muted: #a1a1aa;
+            --accent: #2563eb;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-        body { background-color: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; antialiased: true; line-height: 1.5; tracking: -0.025em; }
-        .container { max-width: 1150px; margin: 0 auto; padding: 0 24px; }
+        body { background-color: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; letter-spacing: -0.02em; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
         
-        /* Header & Navigation Architecture */
-        header { background: rgba(3,7,18,0.85); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); }
-        .nav-wrapper { display: flex; justify-content: space-between; items-center; height: 72px; }
-        .logo-group { display: flex; align-items: center; gap: 12px; }
+        /* Premium Minimal Navigation */
+        header { border-bottom: 1px solid var(--border); background: rgba(9, 9, 11, 0.8); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(20px); }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 80px; }
         
-        /* Responsive Corporate Logo Container */
-        .logo-container { height: 40px; width: auto; display: flex; align-items: center; }
-        .logo-img { height: 100%; width: auto; object-fit: contain; border-radius: 6px; }
+        .brand-block { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; }
+        .brand-logo { height: 32px; width: auto; object-fit: contain; }
+        .brand-text { font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
         
-        .logo-meta { display: flex; flex-direction: column; }
-        .logo-title { font-size: 14px; font-weight: 900; letter-spacing: 0.05em; color: #fff; }
-        .logo-sub { font-size: 9px; letter-spacing: 0.15em; color: var(--primary); font-weight: 700; text-transform: uppercase; margin-top: 2px; }
-        nav { display: flex; gap: 32px; align-items: center; }
-        nav a { text-decoration: none; color: var(--text-muted); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; transition: color 0.2s; }
-        nav a:hover, nav a.active { color: #fff; }
-        .btn { background: var(--primary); color: #fff; border: none; padding: 10px 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 8px; cursor: pointer; transition: background 0.2s; text-decoration: none; display: inline-block; align-self: center; }
-        .btn:hover { background: #1d4ed8; }
+        nav { display: flex; gap: 40px; }
+        nav a { font-size: 12px; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+        nav a:hover, nav a.active { color: var(--text); }
+        
+        .cta-btn { font-size: 12px; font-weight: 600; background: var(--text); color: var(--bg); padding: 10px 24px; border-radius: 6px; text-decoration: none; transition: opacity 0.2s; }
+        .cta-btn:hover { opacity: 0.9; }
 
-        /* Hero Layer */
-        .hero { position: relative; padding: 120px 0 80px 0; border-bottom: 1px solid var(--border); overflow: hidden; text-align: center; }
-        .hero::before { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 800px; height: 400px; background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%); z-index: 1; pointer-events: none; }
-        .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(15,23,42,0.8); border: 1px solid var(--border); color: #60a5fa; font-size: 10px; font-weight: 900; padding: 6px 16px; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 24px; position: relative; z-index: 2; }
-        .badge span { width: 6px; height: 6px; background: #3b82f6; border-radius: 50%; display: inline-block; }
-        h1 { font-size: 48px; font-weight: 900; letter-spacing: -0.03em; color: #fff; line-height: 1.1; max-width: 850px; margin: 0 auto 24px auto; position: relative; z-index: 2; }
-        h1 span { background: linear-gradient(to right, #60a5fa, #3b82f6, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero p { font-size: 15px; color: var(--text-muted); max-width: 640px; margin: 0 auto 32px auto; position: relative; z-index: 2; }
-        .hero-btns { display: flex; justify-content: center; gap: 16px; position: relative; z-index: 2; }
-        .btn-alt { background: #0f172a; border: 1px solid var(--border); color: #e2e8f0; }
-        .btn-alt:hover { background: #1e293b; }
+        /* Global Brand Hero Layout */
+        .hero { padding: 160px 0 120px 0; border-bottom: 1px solid var(--border); }
+        .hero-layout { max-width: 900px; }
+        .meta-tag { font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 24px; display: block; }
+        h1 { font-size: 56px; font-weight: 800; tracking: -0.04em; line-height: 1.05; color: var(--text); margin-bottom: 32px; }
+        h1 span { color: var(--text-muted); }
+        .hero p { font-size: 18px; line-height: 1.6; color: var(--text-muted); max-width: 680px; margin-bottom: 40px; }
+        
+        /* Modern Structured Service Grid */
+        .section-frame { padding: 120px 0; border-bottom: 1px solid var(--border); }
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-top: 64px; }
+        
+        .section-meta { max-width: 600px; }
+        .section-meta h2 { font-size: 32px; font-weight: 800; letter-spacing: -0.03em; }
+        .section-meta p { font-size: 15px; color: var(--text-muted); margin-top: 16px; line-height: 1.6; }
+        
+        .service-node { border-top: 1px solid var(--border); padding-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+        .node-index { font-family: monospace; font-size: 11px; color: var(--text-muted); }
+        .service-node h3 { font-size: 20px; font-weight: 700; color: var(--text); }
+        .service-node p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
-        /* Structural Layout System Grid */
-        .section-padding { padding: 96px 0; }
-        .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 64px; border-left: 2px solid var(--primary); padding-left: 16px; }
-        .section-title-wrapper { display: flex; flex-direction: column; gap: 4px; }
-        .section-label { font-size: 10px; font-weight: 900; color: var(--primary); text-transform: uppercase; letter-spacing: 0.15em; }
-        .section-title { font-size: 28px; font-weight: 900; color: #fff; letter-spacing: -0.02em; }
-        .section-desc { font-size: 12px; color: var(--text-muted); max-width: 320px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+        /* Dual-Column Minimal Matrix */
+        .split-row { display: grid; grid-template-columns: 5fr 7fr; gap: 80px; align-items: start; }
+        .list-matrix { display: flex; flex-direction: column; gap: 32px; }
+        .matrix-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+        .matrix-left { display: flex; flex-direction: column; gap: 6px; }
+        .matrix-label { font-size: 15px; font-weight: 600; color: var(--text); }
+        .matrix-sub { font-size: 12px; color: var(--text-muted); }
+        .matrix-tag { font-family: monospace; font-size: 10px; font-weight: 700; border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px; color: var(--text-muted); }
 
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .card { background: rgba(15,23,42,0.2); border: 1px solid var(--border); padding: 32px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; height: 280px; transition: border-color 0.3s, background-color 0.3s; }
-        .card:hover { border-color: rgba(37,99,235,0.4); background: rgba(15,23,42,0.4); }
-        .card-top { display: flex; flex-direction: column; gap: 16px; }
-        .card-meta { display: flex; justify-content: space-between; align-items: center; }
-        .card-id { width: 32px; height: 32px; background: #0c1524; border: 1px solid rgba(37,99,235,0.3); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: monospace; font-size: 12px; font-weight: 900; color: #60a5fa; }
-        .card-layer { font-size: 9px; font-family: monospace; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.1em; }
-        .card h3 { font-size: 18px; font-weight: 800; color: #fff; }
-        .card p { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
-        .card-action { font-size: 10px; font-weight: 900; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; opacity: 0; transition: opacity 0.3s; }
-        .card:hover .card-action { opacity: 1; }
+        /* Radical Secure Contact Node */
+        .contact-box { background: var(--surface); border: 1px solid var(--border); padding: 64px; border-radius: 12px; text-align: center; max-width: 640px; margin: 40px auto 0 auto; }
+        .contact-box h3 { font-size: 24px; font-weight: 800; margin-bottom: 12px; }
+        .contact-box p { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
+        .secure-mailto { font-family: monospace; font-size: 20px; font-weight: 600; color: var(--text); text-decoration: none; padding: 16px; border: 1px solid var(--border); display: block; border-radius: 8px; transition: border-color 0.2s; }
+        .secure-mailto:hover { border-color: var(--text-muted); }
 
-        /* Split Frame Layouts */
-        .split-frame { display: grid; grid-template-columns: 4fr 8fr; gap: 48px; align-items: center; background: rgba(15,23,42,0.1); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 96px 0; }
-        .split-info { display: flex; flex-direction: column; gap: 20px; }
-        .split-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-        .panel { background: #030712; border: 1px solid var(--border); padding: 24px; border-radius: 12px; display: flex; flex-direction: column; gap: 16px; }
-        .pill { font-size: 10px; font-family: monospace; font-weight: 900; padding: 4px 10px; border-radius: 4px; width: fit-content; border: 1px solid rgba(37,99,235,0.2); }
-        .pill.gov { color: var(--primary); background: rgba(37,99,235,0.1); }
-        .pill.risk { color: var(--emerald); background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.2); }
-        .pill.comp { color: var(--amber); background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.2); }
-        .panel h4 { font-size: 14px; font-weight: 800; color: #fff; }
-        .panel p { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
-
-        /* Secure Action Vault Hub Component */
-        .vault-box { background: #030712; border: 1px solid var(--border); padding: 32px; border-radius: 20px; max-width: 480px; margin: 40px auto 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.5); display: flex; flex-direction: column; gap: 20px; text-align: center; }
-        .vault-routing { font-size: 9px; font-family: monospace; font-weight: 900; color: #475569; text-transform: uppercase; letter-spacing: 0.15em; }
-        .vault-link { font-size: 18px; font-family: monospace; font-weight: 700; color: #60a5fa; text-decoration: none; word-break: break-all; }
-        .vault-link:hover { color: #93c5fd; }
-        .divider { height: 1px; background: var(--border); }
-        .vault-title { font-size: 13px; font-weight: 700; color: #e2e8f0; }
-        .vault-cert { font-size: 9px; font-weight: 900; color: #475569; text-transform: uppercase; letter-spacing: 0.1em; }
-
-        /* Footer Matrix */
-        footer { border-top: 1px solid var(--border); padding: 64px 0; background: #030712; }
-        .footer-grid { display: grid; grid-template-columns: 4fr 8fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand { display: flex; flex-direction: column; gap: 12px; }
-        .footer-tagline { font-size: 12px; color: var(--text-muted); max-width: 280px; }
-        .social-matrix { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-        .social-card { background: rgba(15,23,42,0.2); border: 1px solid var(--border); padding: 16px; border-radius: 12px; text-decoration: none; display: flex; flex-direction: column; justify-content: space-between; height: 96px; transition: border-color 0.2s; }
-        .social-card:hover { border-color: var(--primary); }
-        .social-label { font-size: 9px; font-weight: 900; color: #475569; text-transform: uppercase; }
-        .social-handle { font-size: 12px; font-weight: 700; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .copyright { border-top: 1px solid var(--border); padding-top: 32px; text-align: center; font-size: 10px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.1em; }
+        /* Footer Architecture */
+        footer { padding: 80px 0 40px 0; font-size: 12px; color: var(--text-muted); }
+        .footer-inner { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 40px; }
+        .footer-links { display: flex; gap: 32px; }
+        .footer-links a { color: inherit; text-decoration: none; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--text); }
 
         @media(max-width: 768px) {
-            h1 { font-size: 32px; }
-            .section-header { flex-direction: column; align-items: flex-start; gap: 16px; }
-            .split-frame, .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-            .social-matrix { grid-template-columns: repeat(2, 1fr); }
-            nav { display: none; }
+            h1 { font-size: 38px; }
+            .split-row { grid-template-columns: 1fr; gap: 48px; }
+            nav, header .cta-btn { display: none; }
+            .footer-inner { flex-direction: column; gap: 24px; text-align: center; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Minimal Header Container -->
     <header>
-        <div class="container nav-wrapper">
-            <div class="logo-group">
-                <div class="logo-container">
-                    <img class="logo-img" src="data:image/jpeg;base64,YOUR_BASE64_STRING_HERE" alt="Strace Systems Logo">
-                </div>
-                <div class="logo-meta">
-                    <span class="logo-title">STRACE SYSTEMS</span>
-                    <span class="logo-sub">Enterprise Architecture</span>
-                </div>
-            </div>
-            <nav id="nav-menu">
-                <a href="#home" class="active">Home</a>
-                <a href="#solutions">Solutions</a>
-                <a href="#grc">GRC Framework</a>
-                <a href="#contact">Contact</a>
+        <div class="container nav-inner">
+            <a href="#home" class="brand-block">
+                <!-- Native Corporate Logo Element Mapping -->
+                <img class="brand-logo" src="logo.jpeg" alt="Strace Systems">
+                <span class="brand-text">Strace</span>
+            </a>
+            <nav>
+                <a href="#services" class="active">Services</a>
+                <a href="#framework">GRC Framework</a>
+                <a href="#connect">Contact</a>
             </nav>
-            <div>
-                <a href="#contact" class="btn">Engage</a>
-            </div>
+            <a href="#connect" class="cta-btn">Engage</a>
         </div>
     </header>
 
+    <!-- Global Brand Style Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <div class="badge"><span></span>Systems Integration & Governance Matrix</div>
-            <h1>Architecting Secure Document Infrastructure for <span>High-Stakes GRC Compliance</span></h1>
-            <p>We transform high-volume legacy paper assets into secure, unalterable digital environments powered by structurally hardened SharePoint deployments.</p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn">Initiate System Review</a>
-                <a href="#solutions" class="btn btn-alt">Explore Framework</a>
+            <div class="hero-layout">
+                <span class="meta-tag">Infrastructure Integration</span>
+                <h1>Architecting secure information platforms. <span>Engineered for high-stakes enterprise governance.</span></h1>
+                <p>We harden collaboration layers and physical topography to transform fragile digital environments into legally unalterable, fully audit-ready operational systems.</p>
+                <a href="#connect" class="cta-btn">Initiate Corporate Audit Matrix</a>
             </div>
         </div>
     </section>
 
-    <section id="solutions" class="section-padding">
+    <!-- Services Section -->
+    <section id="services" class="section-frame">
         <div class="container">
-            <div class="section-header">
-                <div class="section-title-wrapper">
-                    <span class="section-label">Capabilities Map</span>
-                    <h2 class="section-title">Engineered Systems Capabilities</h2>
-                </div>
-                <div class="section-desc">Layered enterprise engineering for absolute data integrity.</div>
+            <div class="section-meta">
+                <h2>Engineered Solutions</h2>
+                <p>Technical integration focused explicitly on absolute information longevity, systemic compliance parameters, and deep infrastructure security.</p>
             </div>
             
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-meta">
-                            <div class="card-id">01</div>
-                            <span class="card-layer">Architecture Layer</span>
-                        </div>
-                        <h3>SharePoint DMS Integration</h3>
-                        <p>Enterprise document repositories, digital memo workflows, automated leave approvals, and executive approval chains embedded inside M365.</p>
-                    </div>
-                    <div class="card-action">Deploy System &rarr;</div>
+            <div class="grid-layout">
+                <!-- Service Node 1 -->
+                <div class="service-node">
+                    <span class="node-index">01 / CAPABILITY</span>
+                    <h3>SharePoint DMS Hardening</h3>
+                    <p>Embedding compliance structures directly inside Microsoft 365 environments. Automated leave paths, multi-tier executive memo loops, and persistent file logging protocols.</p>
                 </div>
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-meta">
-                            <div class="card-id">02</div>
-                            <span class="card-layer">Processing Layer</span>
-                        </div>
-                        <h3>Data Processing & Imaging</h3>
-                        <p>Industrial document digitization, OCR text parsing, high-density secure indexing, and mass legacy physical archive conversions.</p>
-                    </div>
-                    <div class="card-action">Deploy System &rarr;</div>
+                <!-- Service Node 2 -->
+                <div class="service-node">
+                    <span class="node-index">02 / CAPABILITY</span>
+                    <h3>High-Volume Archiving</h3>
+                    <p>Industrial digitizing parsing engines, real-time optical character text extraction (OCR), secure index metadata assignment, and structural legacy conversion vectors.</p>
                 </div>
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-meta">
-                            <div class="card-id">03</div>
-                            <span class="card-layer">Topology Layer</span>
-                        </div>
-                        <h3>Network Infrastructure</h3>
-                        <p>Topographical blueprint design and cabling deployment of structured corporate LAN/WAN nodes, firewalls, and switches.</p>
-                    </div>
-                    <div class="card-action">Deploy System &rarr;</div>
+                <!-- Service Node 3 -->
+                <div class="service-node">
+                    <span class="node-index">03 / CAPABILITY</span>
+                    <h3>Topographical Networking</h3>
+                    <p>Comprehensive design and physical layout planning for core LAN/WAN networks, high-density hardware switches, security firewalls, and data transport arrays.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="grc" class="split-frame">
-        <div class="container" style="display: contents;">
-            <div class="split-info">
-                <span class="pill gov">Shield Infrastructure</span>
-                <h2 class="section-title">Embedded Technical GRC Framework</h2>
-                <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">We configure custom-mapped technical controls directly at your code layer to satisfy regulatory parameters.</p>
-            </div>
-            <div class="split-grid">
-                <div class="panel">
-                    <div class="pill gov">GOVERNANCE</div>
-                    <h4>Systems Control</h4>
-                    <p>System-enforced file rights, unalterable asset tracking, and multi-tier administrative security chains.</p>
+                <!-- Service Node 4 -->
+                <div class="service-node">
+                    <span class="node-index">04 / CAPABILITY</span>
+                    <h3>VSAT Communications</h3>
+                    <p>Deployment of high-availability, long-range microwave links and mission-critical satellite telemetry terminal stations across remote operations centers.</p>
                 </div>
-                <div class="panel">
-                    <div class="pill risk">RISK CONTROL</div>
-                    <h4>Risk Mitigation</h4>
-                    <p>Data Loss Prevention (DLP) arrays, endpoint protection, and software blocks against leaks.</p>
+                <!-- Service Node 5 -->
+                <div class="service-node">
+                    <span class="node-index">05 / CAPABILITY</span>
+                    <h3>Hardware Integration</h3>
+                    <p>End-to-end technical sourcing, system procurement, industrial high-density optical logging equipment, and secure backend server infrastructure scaling.</p>
                 </div>
-                <div class="panel">
-                    <div class="pill comp">COMPLIANCE</div>
-                    <h4>Data Compliance</h4>
-                    <p>Automated file retention registries, deep archiving, and purging policies structured to federal mandates.</p>
+                <!-- Service Node 6 -->
+                <div class="service-node">
+                    <span class="node-index">06 / CAPABILITY</span>
+                    <h3>Turnkey Execution</h3>
+                    <p>Providing exhaustive technological engineering and management frameworks for enterprise and public-sector operations, operating under strict SLA models.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section-padding" style="position: relative;">
+    <!-- GRC Split Section -->
+    <section id="framework" class="section-frame">
+        <div class="container split-row">
+            <div class="section-meta">
+                <span class="meta-tag" style="margin-bottom: 16px;">Technical Safeguards</span>
+                <h2>Embedded GRC Architecture</h2>
+                <p>We do not operate as legal consultants. Our team writes and implements the code, storage rules, and network architectures necessary to enforce strict regulatory compliance parameters natively.</p>
+            </div>
+            <div class="list-matrix">
+                <div class="matrix-item">
+                    <div class="matrix-left">
+                        <span class="matrix-label">System-Wide Governance</span>
+                        <span class="matrix-sub">Persistent file validation paths, cryptographic signatures, and role tracking.</span>
+                    </div>
+                    <span class="matrix-tag">GOV_CONTROL</span>
+                </div>
+                <div class="matrix-item">
+                    <div class="matrix-left">
+                        <span class="matrix-label">Risk Layer Isolation</span>
+                        <span class="matrix-sub">Data Loss Prevention (DLP) configuration and explicit domain boundaries.</span>
+                    </div>
+                    <span class="matrix-tag">RISK_MITIGATION</span>
+                </div>
+                <div class="matrix-item">
+                    <div class="matrix-left">
+                        <span class="matrix-label">Automated Policy Purging</span>
+                        <span class="matrix-sub">Pre-scheduled document lifecycles matched to the Nigeria Data Protection Act.</span>
+                    </div>
+                    <span class="matrix-tag">NDPA_2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secure Connect Node -->
+    <section id="connect" class="section-frame" style="border-bottom: none;">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 32px;">
-                <h2 class="section-title">Initialize Enterprise Integration</h2>
-                <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">Modernize your operational posture. Connect directly with our administration board.</p>
+            <div class="contact-box">
+                <h3>Secure Gateway Initiation</h3>
+                <p>Channel requests directly to our administration desk via protected communication channels.</p>
+                <a href="mailto:ioawobajo@gmail.com" class="secure-mailto">ioawobajo@gmail.com</a>
             </div>
-            
-            <div class="vault-box">
-                <span class="vault-
+        </div>
+    </section>
+
+    <!-- Modern Global Brand Footer -->
+    <footer>
+        <div class="container footer-inner">
+            <div>
+                <p>&copy; 2026 Strace Systems Ltd. RC: 9210737. Active Validation Systems Online.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://linkedin.com/company/strace-systems-ltd" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="#">X Network</a>
+                <a href="#">Security Index</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Native Secure Logic Processing Core -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            "use strict";
+
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("nav a");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").includes(current)) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
