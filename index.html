@@ -9,362 +9,344 @@
     <!-- Tailwind CSS Engine -->
     <script src="https://cdn.tailwindcss.com" defer></script>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white scroll-smooth">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white scroll-smooth">
 
     <!-- Premium Enterprise Header -->
-    <header id="home" class="bg-slate-950/80 border-b border-slate-800 sticky top-0 z-50 backdrop-blur-md">
+    <header id="home" class="bg-slate-950/80 border-b border-slate-900 sticky top-0 z-50 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <img src="Logo.jpeg" alt="Strace Systems Ltd Logo" class="h-10 w-auto object-contain">
+                <div class="h-9 w-9 bg-gradient-to-tr from-blue-600 to-indigo-500 rounded-lg flex items-center justify-center font-black text-white tracking-tighter shadow-md shadow-blue-500/20">S</div>
                 <div class="flex flex-col">
-                    <span class="text-lg font-black tracking-tight text-white leading-none">STRACE SYSTEMS</span>
-                    <span class="text-[10px] tracking-widest text-blue-500 font-bold uppercase mt-0.5">Enterprise Architecture</span>
+                    <span class="text-base font-black tracking-tight text-white leading-none">STRACE SYSTEMS</span>
+                    <span class="text-[9px] tracking-widest text-blue-500 font-bold uppercase mt-0.5">Enterprise Architecture</span>
                 </div>
             </div>
-            <!-- Navigation -->
+            <!-- Navigation Links -->
             <nav class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-wider text-slate-400">
                 <a href="#home" class="text-blue-500 hover:text-blue-400 transition">Home</a>
                 <a href="#solutions" class="hover:text-white transition">Solutions</a>
                 <a href="#grc" class="hover:text-white transition">Technical GRC</a>
                 <a href="#compliance" class="hover:text-white transition">Compliance</a>
                 <a href="#sectors" class="hover:text-white transition">Sectors</a>
-                <a href="#clients" class="hover:text-white transition">Clients & Partners</a>
+                <a href="#clients" class="hover:text-white transition">Ecosystem</a>
             </nav>
             <div>
-                <a href="#contact" class="bg-blue-600 text-white text-xs font-bold px-5 py-2.5 rounded-lg hover:bg-blue-500 transition shadow-lg shadow-blue-900/30">Engage Board</a>
+                <a href="#contact" class="bg-blue-600 text-white text-xs font-bold px-4 py-2.5 rounded-lg hover:bg-blue-500 transition shadow-lg shadow-blue-600/20 block">Engage Board</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section: The Hook -->
-    <section class="relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-900 py-28 px-6 border-b border-slate-800 overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.1),transparent_45%)]"></div>
-        <div class="max-w-5xl mx-auto text-center space-y-8 relative z-10">
-            <span class="bg-slate-800 border border-slate-700 text-blue-400 text-[11px] font-black px-4 py-2 rounded-full uppercase tracking-widest inline-block">
-                Information Governance & Systems Integration
-            </span>
-            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-none max-w-4xl mx-auto">
-                Architecting Secure Document Infrastructure for <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-slate-200">High-Stakes GRC Compliance</span>
+    <!-- Hero Section: Modern Dashboard Glow Style -->
+    <section class="relative bg-slate-950 py-32 px-6 border-b border-slate-900 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.12),transparent_50%)]"></div>
+        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+        
+        <div class="max-w-5xl mx-auto text-center space-y-6 relative z-10">
+            <div class="inline-flex items-center space-x-2 bg-slate-900 border border-slate-800 text-blue-400 text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">
+                <span class="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></span>
+                <span>Information Governance & Systems Integration</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-tight max-w-4xl mx-auto">
+                Architecting Secure Document Infrastructure for <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-400">High-Stakes GRC Compliance</span>
             </h1>
-            <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed font-medium">
                 We transform high-volume legacy paper assets into secure, unalterable digital environments. Powered by customized SharePoint deployments structurally hardened against data exposure, internal leaks, and compliance vulnerabilities.
             </p>
-            <div class="flex justify-center gap-4 pt-4">
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold px-8 py-3.5 rounded-xl shadow-xl shadow-blue-900/40 transition">Initiate System Review</a>
-                <a href="#grc" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-sm font-bold px-8 py-3.5 rounded-xl transition">Explore Framework</a>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-6">
+                <a href="#contact" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-8 py-3.5 rounded-xl shadow-xl shadow-blue-600/20 transition uppercase tracking-wider">Initiate System Review</a>
+                <a href="#grc" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-bold px-8 py-3.5 rounded-xl transition uppercase tracking-wider">Explore Framework</a>
             </div>
         </div>
     </section>
 
-    <!-- Core Technology Solutions Section -->
+    <!-- Core Technology Solutions: Visual Grid Layout -->
     <section id="solutions" class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="mb-16 border-l-4 border-blue-500 pl-6">
-            <span class="text-blue-500 text-xs font-black uppercase tracking-widest block mb-1">Permitted Mandates</span>
-            <h2 class="text-3xl font-black text-white">Engineered Systems Capabilities</h2>
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+            <div class="border-l-2 border-blue-500 pl-4">
+                <span class="text-blue-500 text-[10px] font-black uppercase tracking-widest block mb-1">Permitted Mandates</span>
+                <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight">Engineered Systems Capabilities</h2>
+            </div>
+            <p class="text-slate-500 text-xs max-w-xs font-medium">Enterprise architectural layers built specifically for absolute operational performance.</p>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="border border-slate-800 bg-slate-950/40 p-8 rounded-2xl hover:border-slate-700 transition">
-                <div class="text-blue-400 font-bold text-sm uppercase tracking-wider mb-3">SharePoint DMS Integration</div>
-                <p class="text-slate-400 text-sm leading-relaxed">Enterprise document repositories, structured file matrices, digital memo workflows, automated leave approvals, and executive approval chains natively embedded within Microsoft 365.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="group border border-slate-900 bg-slate-900/20 p-8 rounded-2xl hover:border-slate-800 hover:bg-slate-900/40 transition flex flex-col justify-between space-y-6">
+                <div class="space-y-3">
+                    <div class="text-blue-500 font-mono text-xs font-black tracking-widest">01 / REPOSITORIES</div>
+                    <h3 class="text-white font-extrabold text-base tracking-tight">SharePoint DMS Integration</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium">Enterprise document repositories, structured file matrices, digital memo workflows, automated leave approvals, and executive approval chains natively embedded within Microsoft 365.</p>
+                </div>
+                <div class="text-[10px] text-slate-600 font-bold uppercase tracking-wider group-hover:text-blue-400 transition">System Architecture &rarr;</div>
             </div>
-            <div class="border border-slate-800 bg-slate-950/40 p-8 rounded-2xl hover:border-slate-700 transition">
-                <div class="text-blue-400 font-bold text-sm uppercase tracking-wider mb-3">Data Processing & Imaging</div>
-                <p class="text-slate-400 text-sm leading-relaxed">Industrial document digitization, optical character recognition (OCR) parsing, high-density secure indexing, and the secure conversion of massive legacy physical archives into clean data pools.</p>
+            <!-- Card 2 -->
+            <div class="group border border-slate-900 bg-slate-900/20 p-8 rounded-2xl hover:border-slate-800 hover:bg-slate-900/40 transition flex flex-col justify-between space-y-6">
+                <div class="space-y-3">
+                    <div class="text-blue-500 font-mono text-xs font-black tracking-widest">02 / IMAGING</div>
+                    <h3 class="text-white font-extrabold text-base tracking-tight">Data Processing & Imaging</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium">Industrial document digitization, optical character recognition (OCR) parsing, high-density secure indexing, and the secure conversion of massive legacy physical archives into clean data pools.</p>
+                </div>
+                <div class="text-[10px] text-slate-600 font-bold uppercase tracking-wider group-hover:text-blue-400 transition">Data Hardening &rarr;</div>
             </div>
-            <div class="border border-slate-800 bg-slate-950/40 p-8 rounded-2xl hover:border-slate-700 transition">
-                <div class="text-blue-400 font-bold text-sm uppercase tracking-wider mb-3">Network Infrastructure & Security</div>
-                <p class="text-slate-400 text-sm leading-relaxed">Topographical design and cabling deployment of structured corporate LAN/WAN nodes, advanced routing matrices, hardware firewalls, and data switches.</p>
+            <!-- Card 3 -->
+            <div class="group border border-slate-900 bg-slate-900/20 p-8 rounded-2xl hover:border-slate-800 hover:bg-slate-900/40 transition flex flex-col justify-between space-y-6">
+                <div class="space-y-3">
+                    <div class="text-blue-500 font-mono text-xs font-black tracking-widest">03 / ROUTING</div>
+                    <h3 class="text-white font-extrabold text-base tracking-tight">Network Infrastructure</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium">Topographical design and cabling deployment of structured corporate LAN/WAN nodes, advanced routing matrices, hardware firewalls, and data switches.</p>
+                </div>
+                <div class="text-[10px] text-slate-600 font-bold uppercase tracking-wider group-hover:text-blue-400 transition">Topology & Routing &rarr;</div>
             </div>
-            <div class="border border-slate-800 bg-slate-950/40 p-8 rounded-2xl hover:border-slate-700 transition">
-                <div class="text-blue-400 font-bold text-sm uppercase tracking-wider mb-3">VSAT & Telecommunications</div>
-                <p class="text-slate-400 text-sm leading-relaxed">Installation of long-range mission-critical wireless microwave links, secure VSAT satellite terminal stations, and backend infrastructure configurations for reliable corporate connectivity.</p>
+            <!-- Card 4 -->
+            <div class="group border border-slate-900 bg-slate-900/20 p-8 rounded-2xl hover:border-slate-800 hover:bg-slate-900/40 transition flex flex-col justify-between space-y-6">
+                <div class="space-y-3">
+                    <div class="text-blue-500 font-mono text-xs font-black tracking-widest">04 / COMMS</div>
+                    <h3 class="text-white font-extrabold text-base tracking-tight">VSAT & Telecommunications</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium">Installation of long-range mission-critical wireless microwave links, secure VSAT satellite terminal stations, and backend infrastructure configurations for reliable corporate connectivity.</p>
+                </div>
+                <div class="text-[10px] text-slate-600 font-bold uppercase tracking-wider group-hover:text-blue-400 transition">Telecom Infrastructure &rarr;</div>
             </div>
-            <div class="border border-slate-800 bg-slate-950/40 p-8 rounded-2xl hover:border-slate-700 transition">
-                <div class="text-blue-400 font-bold text-sm uppercase tracking-wider mb-3">Hardware Sourcing & Procurement</div>
-                <p class="text-slate-400 text-sm leading-relaxed">Technical equipment supply, high-density server racking, enterprise computers, industrial optical scanners, and automated data logging endpoints sourced directly via global manufacturers.</p>
+            <!-- Card 5 -->
+            <div class="group border border-slate-900 bg-slate-900/20 p-8 rounded-2xl hover:border-slate-800 hover:bg-slate-900/40 transition flex flex-col justify-between space-y-6">
+                <div class="space-y-3">
+                    <div class="text-blue-500 font-mono text-xs font-black tracking-widest">05 / PROCURING</div>
+                    <h3 class="text-white font-extrabold text-base tracking-tight">Hardware Sourcing</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium">Technical equipment supply, high-density server racking, enterprise computers, industrial optical scanners, and automated data logging endpoints sourced directly via global manufacturers.</p>
+                </div>
+                <div class="text-[10px] text-slate-600 font-bold uppercase tracking-wider group-hover:text-blue-400 transition">Supply Chains &rarr;</div>
             </div>
-            <div class="border border-slate-800 bg-slate-950/40 p-8 rounded-2xl hover:border-slate-700 transition">
-                <div class="text-blue-400 font-bold text-sm uppercase tracking-wider mb-3">Turnkey Project Contracting</div>
-                <p class="text-slate-400 text-sm leading-relaxed">Comprehensive technological project delivery for government or corporate institutions, commanding complete execution lifecycles under rigid technical delivery frameworks.</p>
+            <!-- Card 6 -->
+            <div class="group border border-slate-900 bg-slate-900/20 p-8 rounded-2xl hover:border-slate-800 hover:bg-slate-900/40 transition flex flex-col justify-between space-y-6">
+                <div class="space-y-3">
+                    <div class="text-blue-500 font-mono text-xs font-black tracking-widest">06 / EXECUTION</div>
+                    <h3 class="text-white font-extrabold text-base tracking-tight">Turnkey Project Contracting</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium">Comprehensive technological project delivery for government or corporate institutions, commanding complete execution lifecycles under rigid technical delivery frameworks.</p>
+                </div>
+                <div class="text-[10px] text-slate-600 font-bold uppercase tracking-wider group-hover:text-blue-400 transition">Full Deployment &rarr;</div>
             </div>
         </div>
     </section>
 
-    <!-- Technical GRC Framework Section -->
-    <section id="grc" class="bg-slate-950 py-24 px-6 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-4 space-y-4">
-                <span class="text-blue-500 text-xs font-black uppercase tracking-widest block">Structural Shielding</span>
-                <h2 class="text-3xl font-black text-white tracking-tight">Embedded Technical GRC</h2>
-                <p class="text-slate-400 text-sm leading-relaxed">
+    <!-- Technical GRC Framework Section: Split High-Contrast Panel -->
+    <section id="grc" class="bg-slate-900/40 border-t border-b border-slate-900 py-24 px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-4 space-y-4">
+                <div class="bg-slate-900 border border-slate-800 inline-block px-3 py-1 rounded-md text-[10px] font-black uppercase text-blue-500 tracking-wider">Structural Shielding</div>
+                <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight">Embedded Technical GRC Framework</h2>
+                <p class="text-slate-400 text-xs leading-relaxed font-medium">
                     We ensure your document environments don't just store information, but actively secure it. We configure technical controls at the code and systems layer to comply with data safety standards.
                 </p>
             </div>
-            <div class="md:col-span-8 grid sm:grid-cols-3 gap-6">
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800/80">
-                    <div class="text-xl font-black text-blue-500 mb-2">01 / Gov</div>
-                    <h3 class="text-base font-bold text-white mb-2">Systems Governance</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">System-enforced file rights, unalterable background audit tracking, metadata classification, and multi-tier administrative security chains.</p>
+            <div class="lg:col-span-8 grid sm:grid-cols-3 gap-4">
+                <div class="bg-slate-950 p-6 rounded-xl border border-slate-900">
+                    <div class="text-xs font-mono font-black text-blue-500 mb-4 bg-blue-950/40 w-fit px-2 py-0.5 rounded border border-blue-900/50">GOVERNANCE</div>
+                    <h3 class="text-sm font-extrabold text-white mb-2">Systems Governance</h3>
+                    <p class="text-slate-400 text-[11px] leading-relaxed font-medium">System-enforced file rights, unalterable background audit tracking, metadata classification, and multi-tier administrative security chains.</p>
                 </div>
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800/80">
-                    <div class="text-xl font-black text-blue-500 mb-2">02 / Risk</div>
-                    <h3 class="text-base font-bold text-white mb-2">Risk Mitigation</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Data Loss Prevention (DLP) parameters, strict device tracking, endpoint protection rules, and structural blocks against internal file distribution leakage.</p>
+                <div class="bg-slate-950 p-6 rounded-xl border border-slate-900">
+                    <div class="text-xs font-mono font-black text-emerald-500 mb-4 bg-emerald-950/40 w-fit px-2 py-0.5 rounded border border-emerald-900/50">RISK CONTROL</div>
+                    <h3 class="text-sm font-extrabold text-white mb-2">Risk Mitigation</h3>
+                    <p class="text-slate-400 text-[11px] leading-relaxed font-medium">Data Loss Prevention (DLP) parameters, strict device tracking, endpoint protection rules, and structural blocks against internal file leaks.</p>
                 </div>
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800/80">
-                    <div class="text-xl font-black text-blue-500 mb-2">03 / Comp</div>
-                    <h3 class="text-base font-bold text-white mb-2">Data Compliance</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Automated retention, archiving, and purging policies completely mapped to structural legal mandates such as the NDPA and NDPR frameworks.</p>
+                <div class="bg-slate-950 p-6 rounded-xl border border-slate-900">
+                    <div class="text-xs font-mono font-black text-amber-500 mb-4 bg-amber-950/40 w-fit px-2 py-0.5 rounded border border-amber-900/50">COMPLIANCE</div>
+                    <h3 class="text-sm font-extrabold text-white mb-2">Data Compliance</h3>
+                    <p class="text-slate-400 text-[11px] leading-relaxed font-medium">Automated retention, archiving, and purging policies completely mapped to structural legal mandates such as the NDPA and NDPR frameworks.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Enterprise Compliance & Standards Matrix -->
-    <section id="compliance" class="py-24 px-6 bg-slate-900 border-t border-b border-slate-800">
+    <!-- Enterprise Compliance Matrix: Dashboard Registry Cards -->
+    <section id="compliance" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="mb-16 border-l-2 border-blue-500 pl-4">
+            <span class="text-blue-500 text-[10px] font-black uppercase tracking-widest block mb-1">Assurance Framework</span>
+            <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight">Compliance & Regulatory Engineering</h2>
+            <p class="text-slate-500 text-xs mt-1 max-w-xl font-medium">We deploy secure document architectures that enable your organization to satisfy rigorous national and international compliance audits natively.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Box 1 -->
+            <div class="bg-slate-900/30 border border-slate-900 p-6 rounded-xl space-y-3">
+                <span class="inline-block bg-blue-900/30 text-blue-400 border border-blue-800/40 text-[9px] font-mono font-black px-2 py-0.5 rounded">NDPA / NDPR</span>
+                <h4 class="font-extrabold text-white text-sm">Data Privacy Standards</h4>
+                <p class="text-slate-400 text-[11px] leading-relaxed font-medium">We configure automated Data Subject Access Request (DSAR) pipelines, regional data residency parameters, and automated document retention/purging schedules to align with the Nigeria Data Protection Act.</p>
+            </div>
+            <!-- Box 2 -->
+            <div class="bg-slate-900/30 border border-slate-900 p-6 rounded-xl space-y-3">
+                <span class="inline-block bg-indigo-900/30 text-indigo-400 border border-indigo-800/40 text-[9px] font-mono font-black px-2 py-0.5 rounded">ISO/IEC 27001</span>
+                <h4 class="font-extrabold text-white text-sm">Information Security</h4>
+                <p class="text-slate-400 text-[11px] leading-relaxed font-medium">Our technical implementations leverage Microsoft's globally certified ISO 27001 cloud fabric. We map custom internal access controls, multi-factor authentication, and admin trails.</p>
+            </div>
+            <!-- Box 3 -->
+            <div class="bg-slate-900/30 border border-slate-900 p-6 rounded-xl space-y-3">
+                <span class="inline-block bg-emerald-900/30 text-emerald-400 border border-emerald-800/40 text-[9px] font-mono font-black px-2 py-0.5 rounded">GDPR COMPLIANT</span>
+                <h4 class="font-extrabold text-white text-sm">Cross-Border Operations</h4>
+                <p class="text-slate-400 text-[11px] leading-relaxed font-medium">For organizations dealing with international stakeholders, we deploy technical structures supporting "The Right to be Forgotten" and end-to-end cryptographic protection for data at rest.</p>
+            </div>
+            <!-- Box 4 -->
+            <div class="bg-slate-900/30 border border-slate-900 p-6 rounded-xl space-y-3">
+                <span class="inline-block bg-red-900/30 text-red-400 border border-red-800/40 text-[9px] font-mono font-black px-2 py-0.5 rounded">PCI DSS READY</span>
+                <h4 class="font-extrabold text-white text-sm">Financial Data Security</h4>
+                <p class="text-slate-400 text-[11px] leading-relaxed font-medium">We engineer document repositories that prevent the accidental exposure or unencrypted storage of Cardholder Data (CHD). Access logs are locked and insulated to meet auditing standards.</p>
+            </div>
+            <!-- Box 5 -->
+            <div class="bg-slate-900/30 border border-slate-900 p-6 rounded-xl space-y-3">
+                <span class="inline-block bg-amber-900/30 text-amber-400 border border-amber-800/40 text-[9px] font-mono font-black px-2 py-0.5 rounded">HIPAA CORE</span>
+                <h4 class="font-extrabold text-white text-sm">Healthcare Information</h4>
+                <p class="text-slate-400 text-[11px] leading-relaxed font-medium">We isolate Protected Health Information (PHI) through high-level encrypted containerization, configuring automated workflow time-outs and specific permission tiers for diagnostic storage.</p>
+            </div>
+            <!-- Note Box -->
+            <div class="bg-blue-950/10 border border-blue-900/30 p-6 rounded-xl flex flex-col justify-center">
+                <span class="text-[9px] font-black text-blue-400 uppercase tracking-widest mb-1">Architect's Note</span>
+                <p class="text-slate-500 text-[10px] leading-relaxed font-medium">Strace Systems Ltd operates purely as a technical systems integrator. We implement, configure, and monitor security controls within your technology stack to satisfy governance rules.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operational Sectors: Distinct Column Architectures -->
+    <section id="sectors" class="bg-slate-900/20 py-24 px-6 border-t border-b border-slate-900">
         <div class="max-w-6xl mx-auto">
-            <div class="mb-16 border-l-4 border-blue-500 pl-6">
-                <span class="text-blue-500 text-xs font-black uppercase tracking-widest block mb-1">Assurance Framework</span>
-                <h2 class="text-3xl font-black text-white">Compliance & Regulatory Engineering</h2>
-                <p class="text-slate-400 text-sm mt-2 max-w-2xl">
-                    We deploy secure document architectures that enable your organization to satisfy rigorous national and international compliance audits natively. 
-                </p>
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-blue-500 text-[10px] font-black uppercase tracking-widest block mb-1">Operational Scopes</span>
+                <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight">Target Operational Sectors</h2>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- NDPA / NDPR -->
-                <div class="bg-slate-950/40 p-6 rounded-xl border border-slate-800">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <span class="bg-blue-900/40 text-blue-400 font-mono text-xs px-2.5 py-1 rounded border border-blue-800/60">NDPA / NDPR</span>
-                        <h4 class="font-bold text-white text-sm">Data Privacy Standards</h4>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Box Vertical 1 -->
+                <div class="bg-slate-950 p-8 rounded-2xl border border-slate-900 space-y-6">
+                    <div class="flex justify-between items-center border-b border-slate-900 pb-4">
+                        <h3 class="text-lg font-black text-white">Public Sector</h3>
+                        <span class="text-[9px] font-mono font-bold tracking-wider text-blue-400 bg-blue-950/60 border border-blue-900 px-2 py-0.5 rounded">GOVT</span>
                     </div>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        We configure automated Data Subject Access Request (DSAR) pipelines, strict regional data residency parameters, and automated document retention/purging schedules to seamlessly align with the Nigeria Data Protection Act.
-                    </p>
-                </div>
-
-                <!-- ISO 27001 -->
-                <div class="bg-slate-950/40 p-6 rounded-xl border border-slate-800">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <span class="bg-blue-900/40 text-blue-400 font-mono text-xs px-2.5 py-1 rounded border border-blue-800/60">ISO/IEC 27001</span>
-                        <h4 class="font-bold text-white text-sm">Information Security</h4>
-                    </div>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        Our technical implementations leverage Microsoft's globally certified ISO 27001 cloud fabric. We map custom internal access controls, multi-factor authentication policies, and unalterable administrator audit trails to satisfy security lifecycle requirements.
-                    </p>
-                </div>
-
-                <!-- GDPR -->
-                <div class="bg-slate-950/40 p-6 rounded-xl border border-slate-800">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <span class="bg-blue-900/40 text-blue-400 font-mono text-xs px-2.5 py-1 rounded border border-blue-800/60">GDPR Compliance</span>
-                        <h4 class="font-bold text-white text-sm">Cross-Border Operations</h4>
-                    </div>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        For organizations dealing with international stakeholders, we deploy technical structures supporting "The Right to be Forgotten," end-to-end cryptographic protection for data at rest, and automated leak detection controls.
-                    </p>
-                </div>
-
-                <!-- PCI DSS -->
-                <div class="bg-slate-950/40 p-6 rounded-xl border border-slate-800">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <span class="bg-blue-900/40 text-blue-400 font-mono text-xs px-2.5 py-1 rounded border border-blue-800/60">PCI DSS Ready</span>
-                        <h4 class="font-bold text-white text-sm">Financial Data Security</h4>
-                    </div>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        We engineer document repositories that prevent the accidental exposure or unencrypted storage of Cardholder Data (CHD). Access logs are locked and insulated to meet payment ecosystem auditing standards.
-                    </p>
-                </div>
-
-                <!-- HIPAA -->
-                <div class="bg-slate-950/40 p-6 rounded-xl border border-slate-800">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <span class="bg-blue-900/40 text-blue-400 font-mono text-xs px-2.5 py-1 rounded border border-blue-800/60">HIPAA Framework</span>
-                        <h4 class="font-bold text-white text-sm">Healthcare Information</h4>
-                    </div>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        We isolate Protected Health Information (PHI) through high-level encrypted containerization, configuring automated workflow time-outs and specific permission tiers for medical and clinical diagnostic systems.
-                    </p>
-                </div>
-
-                <!-- Governance Architecture Note -->
-                <div class="bg-blue-950/20 p-6 rounded-xl border border-blue-900/40 flex flex-col justify-center">
-                    <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Architect's Note</span>
-                    <p class="text-slate-400 text-[11px] leading-relaxed">
-                        Strace Systems Ltd operates purely as a technical systems integrator. We implement, configure, and monitor security controls within your technology stack to fulfill your necessary compliance checkboxes.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Premium Sectors Section -->
-    <section id="sectors" class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-20">
-            <span class="text-blue-500 text-xs font-black uppercase tracking-widest block mb-1">Institutional Matrices</span>
-            <h2 class="text-3xl font-black text-white">Target Operational Sectors</h2>
-            <p class="text-slate-400 text-sm mt-2">Configuring and deploying technical compliance, high-capacity file handling, and unyielding info protection architectures across major verticals.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Vertical 1 -->
-            <div class="bg-slate-950/60 p-8 rounded-2xl border border-slate-800 shadow-xl flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <h3 class="text-xl font-extrabold text-white">Public Sector</h3>
-                        <span class="text-[10px] font-bold tracking-wider text-blue-400 bg-blue-950/80 border border-blue-900 px-2.5 py-1 rounded-md uppercase">Institutional</span>
-                    </div>
-                    <ul class="space-y-4 text-xs text-slate-400">
-                        <li class="flex items-start"><span class="text-blue-500 mr-2">■</span> <strong>Ministries, Departments, & Agencies:</strong> Legacy paper digitization, automated inter-ministerial file routing, and land title processing registries.</li>
-                        <li class="flex items-start"><span class="text-blue-500 mr-2">■</span> <strong>Judicial & Court Systems:</strong> Secure e-Filing infrastructures, unalterable digital case registries, and legal record retention chains.</li>
-                        <li class="flex items-start"><span class="text-blue-500 mr-2">■</span> <strong>Academic Institutions:</strong> Automated transcript verification pipelines, central senate registries, and digital student archives.</li>
+                    <ul class="space-y-4 text-xs font-medium text-slate-400">
+                        <li class="leading-relaxed"><strong class="text-slate-300 block mb-0.5">Ministries & Agencies:</strong> Legacy paper digitization, automated file routing, and land title processing registries.</li>
+                        <li class="leading-relaxed"><strong class="text-slate-300 block mb-0.5">Judicial Systems:</strong> Secure e-Filing infrastructures, unalterable digital case registries, and record retention chains.</li>
+                        <li class="leading-relaxed"><strong class="text-slate-300 block mb-0.5">Academic Institutions:</strong> Automated transcript verification, central senate registries, and digital student archives.</li>
                     </ul>
                 </div>
-            </div>
-            <!-- Vertical 2 -->
-            <div class="bg-slate-950/60 p-8 rounded-2xl border border-slate-800 shadow-xl flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <h3 class="text-xl font-extrabold text-white">Private For-Profit</h3>
-                        <span class="text-[10px] font-bold tracking-wider text-slate-400 bg-slate-900 border border-slate-800 px-2.5 py-1 rounded-md uppercase">Commercial</span>
+                <!-- Box Vertical 2 -->
+                <div class="bg-slate-950 p-8 rounded-2xl border border-slate-900 space-y-6">
+                    <div class="flex justify-between items-center border-b border-slate-900 pb-4">
+                        <h3 class="text-lg font-black text-white">Private For-Profit</h3>
+                        <span class="text-[9px] font-mono font-bold tracking-wider text-slate-400 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">CORP</span>
                     </div>
-                    <ul class="space-y-4 text-xs text-slate-400">
-                        <li class="flex items-start"><span class="text-blue-500 mr-2">■</span> <strong>Banking, Financial Services, & Insurance:</strong> Automated client KYC matching, credit folder centralization, and multi-tier internal audit trails.</li>
-                        <li class="flex items-start"><span class="text-blue-500 mr-2">■</span> <strong>Energy, Oil, & Gas Operators:</strong> High-security storage for operational blueprints, environmental reports, and vendor procurement tracking.</li>
-                        <li class="flex items-start"><span class="text-blue-500 mr-2">■</span> <strong>Law Firms & Practices:</strong> Digital litigation preparation boards, centralized contract repositories, and instant keyword indexing.</li>
+                    <ul class="space-y-4 text-xs font-medium text-slate-400">
+                        <li class="leading-relaxed"><strong class="text-slate-300 block mb-0.5">Banking & Insurance:</strong> Automated client KYC matching, credit folder centralization, and multi-tier internal audit trails.</li>
+                        <li class="leading-relaxed"><strong class="text-slate-300 block mb-0.5">Energy, Oil & Gas:</strong> High-security storage for operational blueprints, environmental reports, and vendor procurement.</li>
+                        <li class="leading-relaxed"><strong class="text-slate-300 block mb-0.5">Law Firms & Practices:</strong> Digital litigation preparation boards, centralized contract repositories, and instant index search.</li>
                     </ul>
                 </div>
-            </div>
-            <!-- Vertical 3 -->
-            <div class="bg-slate-950/60 p-8 rounded-2xl border border-slate-800 shadow-xl flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <h3 class="text-xl font-extrabold text-white">Non-Profit Sector</h3>
-                        <span class="text-[10px] font-bold tracking-wider text-emerald-400 bg-emerald-950/50 border border-emerald-900 px-2.5 py-1 rounded-md uppercase">Civil Society</span>
+                <!-- Box Vertical 3 -->
+                <div class="bg-slate-950 p-8 rounded-2xl border border-slate-900 space-y-6">
+                    <div class="flex justify-between items-center border-b border-slate-900 pb-4">
+                        <h3 class="text-lg font-black text-white">Non-Profit Sector</h3>
+                        <span class="text-[9px] font-mono font-bold tracking-wider text-emerald-400 bg-emerald-950/50 border border-emerald-900 px-2 py-0.5 rounded">NGO</span>
                     </div>
-                    <ul class="space-y-4 text-xs text-slate-400">
-                        <li class="flex items-start"><span class="text-blue-500 mr-2">■</span> <strong>International NGOs & Donors:</strong> Grant allocation logging, cross-border deployment data filing, and multi-currency auditing pipelines.</li>
-                        <li class="flex items-start"><span class="text-blue-500 mr-2">■</span> <strong>Trade & Professional Associations:</strong> Membership records integration, policy publication databases, and structural compliance tracking.</li>
-                        <li class="flex items-start"><span class="text-blue-500 mr-2">■</span> <strong>Faith-Based Organizations:</strong> Central headquarter administrative file processing, educational board tracking, and operational asset records.</li>
+                    <ul class="space-y-4 text-xs font-medium text-slate-400">
+                        <li class="leading-relaxed"><strong class="text-slate-300 block mb-0.5">International NGOs:</strong> Grant allocation logging, cross-border deployment data filing, and auditing pipelines.</li>
+                        <li class="leading-relaxed"><strong class="text-slate-300 block mb-0.5">Trade Associations:</strong> Membership records integration, policy publication databases, and structural compliance tracking.</li>
+                        <li class="leading-relaxed"><strong class="text-slate-300 block mb-0.5">Faith-Based Groups:</strong> Headquarter administrative file processing, educational board tracking, and operational asset records.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Clients & Partners Ecosystem Section -->
-    <section id="clients" class="bg-slate-950 py-24 px-6 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto space-y-16">
+    <!-- Clients & Partners Ecosystem: Clean Enterprise Layout -->
+    <section id="clients" class="py-24 px-6 max-w-6xl mx-auto space-y-12">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-4 space-y-2">
+                <span class="text-blue-500 text-[10px] font-black uppercase tracking-widest block">Operational Footprint</span>
+                <h3 class="text-xl font-black text-white tracking-tight">Target Ecosystem Profile</h3>
+                <p class="text-slate-500 text-xs leading-relaxed font-medium">We deploy unified integration infrastructures for legal firms, non-profit systems, and public institutions aiming to eliminate structural risk.</p>
+            </div>
+            <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs font-bold tracking-wide text-slate-400">
+                <div class="p-4 bg-slate-900/30 border border-slate-900 rounded-xl">Legal Firms</div>
+                <div class="p-4 bg-slate-900/30 border border-slate-900 rounded-xl">Civil Registries</div>
+                <div class="p-4 bg-slate-900/30 border border-slate-900 rounded-xl">NGO Offices</div>
+                <div class="p-4 bg-slate-900/30 border border-slate-900 rounded-xl">Private Academies</div>
+            </div>
+        </div>
+
+        <div class="h-px bg-slate-900"></div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-4 space-y-2 lg:order-last">
+                <span class="text-blue-500 text-[10px] font-black uppercase tracking-widest block">Alliances & Tooling</span>
+                <h3 class="text-xl font-black text-white tracking-tight">Technology Architecture Stack</h3>
+                <p class="text-slate-500 text-xs leading-relaxed font-medium">Our deployments maximize platform architecture. We configure ecosystems that interface cleanly with tier-one provider frames and OEM lines.</p>
+            </div>
+            <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-[10px] font-mono font-black text-slate-500 uppercase tracking-widest">
+                <div class="p-4 bg-slate-900/20 border border-slate-900/60 rounded-xl">Microsoft 365</div>
+                <div class="p-4 bg-slate-900/20 border border-slate-900/60 rounded-xl">SharePoint Core</div>
+                <div class="p-4 bg-slate-900/20 border border-slate-900/60 rounded-xl">Power Automate</div>
+                <div class="p-4 bg-slate-900/20 border border-slate-900/60 rounded-xl">Hardware OEM</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secure Engagement Node -->
+    <section id="contact" class="bg-slate-900/30 border-t border-slate-900 py-24 px-6 text-center">
+        <div class="max-w-2xl mx-auto space-y-8">
+            <div class="space-y-2">
+                <h2 class="text-3xl font-black text-white tracking-tight">Initialize Enterprise Integration</h2>
+                <p class="text-slate-400 text-xs max-w-md mx-auto leading-relaxed font-medium">Contact our systems architecture board to discuss document modernization tenders, legacy data processing, or deployment integration.</p>
+            </div>
             
-            <!-- Ecosystem Section 1: Clients Model -->
-            <div class="grid md:grid-cols-12 gap-8 items-center">
-                <div class="md:col-span-4">
-                    <span class="text-blue-500 text-xs font-black uppercase tracking-widest block mb-1">Operational Footprint</span>
-                    <h3 class="text-2xl font-black text-white">Client Systems Profiles</h3>
-                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                        We deploy custom integration infrastructures for legal firms, non-profit offices, and public institutions aiming to convert physical risk into automated structural performance.
-                    </p>
+            <div class="bg-slate-950 border border-slate-900 p-8 rounded-2xl max-w-md mx-auto shadow-xl space-y-4">
+                <div class="space-y-1">
+                    <span class="text-[9px] tracking-widest font-black text-slate-500 uppercase block">Secure Comms Node</span>
+                    <a href="mailto:ioawobajo@gmail.com" class="text-lg font-mono font-bold text-blue-400 hover:text-blue-300 transition block truncate">ioawobajo@gmail.com</a>
                 </div>
-                <div class="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
-                    <div class="p-6 bg-slate-900 border border-slate-800 text-center rounded-xl font-bold text-slate-400 text-sm tracking-wide">Legal Consultancies</div>
-                    <div class="p-6 bg-slate-900 border border-slate-800 text-center rounded-xl font-bold text-slate-400 text-sm tracking-wide">Civil Registries</div>
-                    <div class="p-6 bg-slate-900 border border-slate-800 text-center rounded-xl font-bold text-slate-400 text-sm tracking-wide">NGO Operations</div>
-                    <div class="p-6 bg-slate-900 border border-slate-800 text-center rounded-xl font-bold text-slate-400 text-sm tracking-wide">Corporate Offices</div>
-                    <div class="p-6 bg-slate-900 border border-slate-800 text-center rounded-xl font-bold text-slate-400 text-sm tracking-wide">Private Academies</div>
-                    <div class="p-6 bg-slate-900 border border-slate-800 text-center rounded-xl font-bold text-blue-500 text-sm tracking-wide">Your Enterprise Next?</div>
-                </div>
+                <div class="h-px bg-slate-900"></div>
+                <div class="text-xs font-bold text-slate-300">Strace Systems Ltd</div>
+                <div class="text-[9px] text-slate-600 font-semibold uppercase tracking-wider">Federal Republic Incorporation Mandate • RC: 9210737</div>
             </div>
-
-            <div class="h-px bg-slate-800 max-w-4xl mx-auto"></div>
-
-            <!-- Ecosystem Section 2: Technology Alliances -->
-            <div class="grid md:grid-cols-12 gap-8 items-center">
-                <div class="md:col-span-4 md:order-last">
-                    <span class="text-blue-500 text-xs font-black uppercase tracking-widest block mb-1">Strategic Alliances</span>
-                    <h3 class="text-2xl font-black text-white">Technology Partners</h3>
-                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                        Our deployments maximize enterprise platform engineering. We configure architectures that seamlessly interface with trusted tier-one cloud providers and hardware distribution lines.
-                    </p>
-                </div>
-                <div class="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    <div class="p-4 bg-slate-900/50 border border-slate-800/60 rounded-xl text-center text-xs font-black tracking-widest text-slate-500 uppercase">Microsoft 365</div>
-                    <div class="p-4 bg-slate-900/50 border border-slate-800/60 rounded-xl text-center text-xs font-black tracking-widest text-slate-500 uppercase">SharePoint Engine</div>
-                    <div class="p-4 bg-slate-900/50 border border-slate-800/60 rounded-xl text-center text-xs font-black tracking-widest text-slate-500 uppercase">Power Automate</div>
-                    <div class="p-4 bg-slate-900/50 border border-slate-800/60 rounded-xl text-center text-xs font-black tracking-widest text-slate-500 uppercase">Hardware OEM Lines</div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- Engagement Section -->
-    <section id="contact" class="py-28 px-6 max-w-4xl mx-auto text-center relative">
-        <h2 class="text-4xl font-black text-white mb-4 tracking-tight">Initialize Enterprise Integration</h2>
-        <p class="text-slate-400 text-sm max-w-lg mx-auto mb-12 leading-relaxed">
-            Contact our systems architecture board to discuss document modernization tenders, legacy archive data processing, or unified security infrastructure integration.
-        </p>
-        
-        <div class="bg-gradient-to-b from-slate-950 to-slate-950 border border-slate-800 p-10 rounded-3xl max-w-md mx-auto shadow-2xl relative z-10">
-            <span class="text-[10px] tracking-widest font-black text-slate-500 uppercase block mb-1">Corporate Correspondence Address</span>
-            <a href="mailto:ioawobajo@gmail.com" class="text-xl font-bold text-blue-400 hover:text-blue-300 transition underline decoration-slate-700 underline-offset-4">ioawobajo@gmail.com</a>
-            <div class="h-px bg-slate-800 my-6"></div>
-            <div class="text-sm font-bold text-white">Strace Systems Ltd</div>
-            <div class="text-[10px] text-slate-500 font-medium mt-1">Incorporated Under Federal Republic Mandate • RC: 9210737</div>
-        </div>
-    </section>
-
-    <!-- Enterprise Social Communications Index & Footer -->
-    <footer class="bg-slate-950 border-t border-slate-900 text-slate-500 pt-16 pb-12 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-12">
+    <!-- Modern Social Grid Matrix & Footer Container -->
+    <footer class="bg-slate-950 border-t border-slate-900 text-slate-500 py-16 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-12">
             
-            <!-- Corporate Brand Callout -->
-            <div class="md:col-span-5 space-y-3">
+            <!-- Corporate Information Core -->
+            <div class="lg:col-span-4 space-y-3">
                 <div class="flex items-center space-x-2">
-                    <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-                    <span class="text-xs font-black tracking-widest uppercase text-slate-300">STRACE SYSTEMS DATA INDEX</span>
+                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                    <span class="text-[10px] font-black tracking-widest uppercase text-slate-300">STRACE NETWORKS INDEX</span>
                 </div>
-                <p class="text-slate-500 text-xs leading-relaxed max-w-sm">
-                    Monitored digital channels for technical engineering updates, whitepapers, structural corporate notifications, and global documentation governance strategy updates.
+                <p class="text-slate-500 text-xs leading-relaxed font-medium">
+                    Verified channels for technological releases, structural corporate changes, whitepapers, and operational communications governance frameworks.
                 </p>
             </div>
 
-            <!-- Social Matrix Grid Blocks -->
-            <div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-4">
-                <!-- LinkedIn Link -->
-                <a href="https://linkedin.com/company/strace-systems-ltd" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-blue-600 transition">
-                    <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500 group-hover:text-blue-400 transition">LinkedIn</span>
-                    <span class="text-xs font-bold text-slate-300 mt-2 block tracking-tight">/strace-systems-ltd</span>
+            <!-- Interlinked Social Blocks -->
+            <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <a href="https://linkedin.com/company/strace-systems-ltd" target="_blank" rel="noopener noreferrer" class="group bg-slate-900/40 border border-slate-900 p-4 rounded-xl hover:border-blue-600 transition flex flex-col justify-between h-24">
+                    <span class="text-[9px] font-black tracking-wider uppercase text-slate-500 group-hover:text-blue-400 transition">LinkedIn</span>
+                    <span class="text-xs font-bold text-slate-300 tracking-tight block truncate">/strace-systems-ltd</span>
                 </a>
-                <!-- X Link -->
-                <a href="#" class="group flex flex-col justify-between p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-slate-600 transition">
-                    <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500 group-hover:text-white transition">X / Twitter</span>
-                    <span class="text-xs font-bold text-slate-300 mt-2 block tracking-tight">@StraceSystems</span>
+                <a href="#" class="group bg-slate-900/40 border border-slate-900 p-4 rounded-xl hover:border-slate-700 transition flex flex-col justify-between h-24">
+                    <span class="text-[9px] font-black tracking-wider uppercase text-slate-500 group-hover:text-white transition">X / Twitter</span>
+                    <span class="text-xs font-bold text-slate-300 tracking-tight block truncate">@StraceSystems</span>
                 </a>
-                <!-- Instagram Link -->
-                <a href="#" class="group flex flex-col justify-between p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-pink-600 transition">
-                    <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500 group-hover:text-pink-400 transition">Instagram</span>
-                    <span class="text-xs font-bold text-slate-300 mt-2 block tracking-tight">@stracesystems</span>
+                <a href="#" class="group bg-slate-900/40 border border-slate-900 p-4 rounded-xl hover:border-pink-900 transition flex flex-col justify-between h-24">
+                    <span class="text-[9px] font-black tracking-wider uppercase text-slate-500 group-hover:text-pink-500 transition">Instagram</span>
+                    <span class="text-xs font-bold text-slate-300 tracking-tight block truncate">@stracesystems</span>
                 </a>
-                <!-- Facebook Link -->
-                <a href="#" class="group flex flex-col justify-between p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-blue-800 transition">
-                    <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500 group-hover:text-blue-500 transition">Facebook</span>
-                    <span class="text-xs font-bold text-slate-300 mt-2 block tracking-tight">/stracesystems</span>
-                </a>
-                <!-- Secured Email Routing Block -->
-                <a href="mailto:ioawobajo@gmail.com" class="group col-span-2 sm:col-span-2 flex flex-col justify-between p-4 bg-blue-950/20 border border-blue-900/30 rounded-xl hover:border-blue-500 transition">
-                    <span class="text-[10px] font-black tracking-wider uppercase text-blue-400">Direct Comms Routing</span>
-                    <span class="text-xs font-mono text-slate-300 mt-2 block tracking-tight truncate">ioawobajo@gmail.com</span>
+                <a href="#" class="group bg-slate-900/40 border border-slate-900 p-4 rounded-xl hover:border-blue-900 transition flex flex-col justify-between h-24">
+                    <span class="text-[9px] font-black tracking-wider uppercase text-slate-500 group-hover:text-blue-500 transition">Facebook</span>
+                    <span class="text-xs font-bold text-slate-300 tracking-tight block truncate">/stracesystems</span>
                 </a>
             </div>
         </div>
 
-        <!-- System Separation Break -->
         <div class="h-px bg-slate-900 max-w-6xl mx-auto mb-8"></div>
 
-        <!-- Copyright Legal Framework Section -->
-        <div class="max-w-6xl mx-auto text-center text-[11px] text-slate-600 font-semibold tracking-wide">
-            &copy; 2026 Strace Systems Ltd. Core structures and business activities validated under official regulatory certificates. RC: 9210737
+        <!-- System Legals -->
+        <div class="max-w-6xl mx-auto text-center text-[10px] text-slate-600 font-bold tracking-wide uppercase">
+            &copy; 2026 Strace Systems Ltd. Corporate validation frameworks active under verification parameters. RC: 9210737
         </div>
     </footer>
 
